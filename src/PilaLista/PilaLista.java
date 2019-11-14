@@ -83,7 +83,7 @@ public class PilaLista {
         return i;
     }
 
-    public int getMaxLength() {
+    int getMaxLength() {
         return maxLength;
     }
 }

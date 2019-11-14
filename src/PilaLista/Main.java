@@ -11,7 +11,8 @@ public class Main {
                     "1 - Ingresar\n" +
                     "2 - Retirar\n" +
                     "3 - Consultar\n" +
-                    "4 - Salir\n"
+                    "4 - ¿Hay espacio?" +
+                    "5 - Salir\n"
             ));
 
             switch (option) {
@@ -41,6 +42,16 @@ public class Main {
                     break;
 
                 case 4:
+                    if (list.length() < list.getMaxLength()) {
+                        JOptionPane.showMessageDialog(null, "La pila tiene espacio disponible");
+                        list.print();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "La pila está llena");
+                        list.print();
+                    }
+                    break;
+
+                case 5:
                     System.exit(20);
             }
         }
