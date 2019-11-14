@@ -11,7 +11,7 @@ public class Main {
                     "1 - Ingresar\n" +
                     "2 - Retirar\n" +
                     "3 - Consultar\n" +
-                    "4 - ¿Hay espacio?" +
+                    "4 - ¿Hay espacio?\n" +
                     "5 - Salir\n"
             ));
 
@@ -32,8 +32,8 @@ public class Main {
                         list.quitar();
                         JOptionPane.showMessageDialog(null, "Se ha retirado el vehiculo de placas " + enrollment);
                     } else {
-                        JOptionPane.showMessageDialog(null, "No fue posible retirar debido a que no está en la cima");
-                        list.print();
+                        JOptionPane.showMessageDialog(null, "No fue posible retirar debido a que no está en la cima, debe esperar a los vehiculos listados en la consola");
+                        list.print(enrollment);
                     }
                     break;
 

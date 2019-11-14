@@ -70,6 +70,25 @@ public class PilaLista {
         return i;
     }
 
+    int print(String ref) {
+        NodoPila t = cima;
+
+        int i = length();
+        while (!pilaVacia() && t != null) {
+            Vehicle vehicle = (Vehicle) t.elemento;
+            if (!ref.equals(vehicle.enrollment)) {
+                System.out.printf("Vehiculo placas %6s ubicado en posición %2d\n", vehicle.enrollment, i);
+                t = t.siguiente;
+                i--;
+            } else {
+                break;
+            }
+        }
+        System.out.println();
+        System.out.println();
+        return i;
+    }
+
     int length() {
         NodoPila t = cima;
 
