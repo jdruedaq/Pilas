@@ -70,7 +70,7 @@ public class PilaLista {
         return i;
     }
 
-    int print(String ref) {
+    void print(String ref) {
         NodoPila t = cima;
 
         int i = length();
@@ -86,7 +86,6 @@ public class PilaLista {
         }
         System.out.println();
         System.out.println();
-        return i;
     }
 
     int length() {
